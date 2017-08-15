@@ -1,6 +1,14 @@
 .redClicked {
   background-color : red
 }
-.bludClicked {
+.blueClicked {
   background-color : blue
+}
+.node-container {
+  flex : auto
+}
+
+.node-button {
+  font-weight: bold;
+  font-size: 1.17em;
 }
