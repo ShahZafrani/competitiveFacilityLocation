@@ -2,12 +2,8 @@ var redScore = 0;
 var blueScore = 0;
 
 var whoseTurn = "Red Player";
-var gameSize = 11;
 var red = "Red Player";
 var blue = "Blue Player";
-
-var maxVal = 10;
-var minVal = 1;
 
 function updateView()
 {
@@ -29,7 +25,6 @@ function clickButtonHandler(event) {
   var button = (event.target); 
   button.disabled=true;
   var weight = parseInt(button.innerHTML);
-  console.log(weight);
   if(whoseTurn == red) {
     button.className = "redClicked";
     redScore += weight;
@@ -39,12 +34,32 @@ function clickButtonHandler(event) {
   }
   changeTurn();
   updateView();
+  disableNeighbors(button.id)
 
 }
 
+function disableNeighbors(elemId) {
+  var nodeNum = parseInt(elemId.slice(4));
+  var left = nodeNum -1;
+  var right = nodeNum +1;
+
+  if(document.getElementById("node"+left)) {
+    document.getElementById("node"+left).disabled = true;
+  }
+  if(document.getElementById("node"+right)) {
+    document.getElementById("node"+right).disabled = true;
+  }
+}
+
 function generateGameBoard() {
+  var gameSize = document.getElementById("gameSize").value;
+  var maxVal = document.getElementById("maxWeight").value;
+  var minVal = document.getElementById("minWeight").value;
   var rnJesus = 10;
   var container = document.getElementById("node-container");
+  container.innerHTML = "";
+  redScore = 0;
+  blueScore = 0;
   
   for (i = 0; i < gameSize; i++) {
     rnJesus = Math.floor((Math.random() * maxVal) + minVal);
