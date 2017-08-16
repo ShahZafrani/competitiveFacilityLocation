@@ -12,7 +12,7 @@
 
 Based on this slide from my Advance Algorithms course.
 
-![imageFromSlide](images\imageFromSlide.png?raw=true)
+![imageFromSlide](https://raw.githubusercontent.com/ShahZafrani/competitiveFacilityLocation/master/images/imageFromSlide.png?raw=true)
 
 This project also served as an exercise for me to implement a simple game with vanilla javascript and html. No frameworks, no jquery. It sounds (and is) simple, but it was a learning experience nonetheless. 
 
