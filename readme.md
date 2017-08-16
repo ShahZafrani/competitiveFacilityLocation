@@ -9,6 +9,7 @@
 + 4 Colors and 4K Compatibility
 + Educational Material, great for your kids!
 + 90s dialup internet A E S T H E T I C
+
 Enjoy the playable demo [here](https://shahzain.io/games/competetiveFacilityLocation/index.html)
 
 Based on this slide from my Advance Algorithms course.
