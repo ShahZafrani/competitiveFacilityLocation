@@ -24,8 +24,9 @@ function changeTurn() {
   }
 }
 
-function updateButton(button)
-{
+function clickButtonHandler(event) {
+
+  var button = (event.target); 
   button.disabled=true;
   var weight = parseInt(button.innerHTML);
   console.log(weight);
@@ -38,6 +39,7 @@ function updateButton(button)
   }
   changeTurn();
   updateView();
+
 }
 
 function generateGameBoard() {
@@ -52,8 +54,7 @@ function generateGameBoard() {
     button.innerHTML = rnJesus;
     button.id = nodeId;
     container.appendChild(button);
-    // button.onclick = updateButton;
-    document.getElementById(nodeId).onclick = updateButton(this);
+    button.onclick = clickButtonHandler;
   }
   updateView();
 }
