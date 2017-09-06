@@ -12,3 +12,10 @@
   font-weight: bold;
   font-size: 1.17em;
 }
+
+body {
+  width: 70%;     /* specify a width! */
+  margin: 0 auto; /* center */
+  text-align: center;
+  background-color: lightgoldenrodyellow;
+}
